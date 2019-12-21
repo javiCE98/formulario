@@ -1,0 +1,50 @@
+body{
+
+	background-color: lightblue;
+}
+
+#mostrarOcultar{
+
+	background-color:orange;
+	border-radius: 12px;
+
+}
+
+#inicioSesion{
+
+	background-color:green;
+	border-radius: 12px;
+
+}
+
+#registrarme{
+
+	color:#D300BF;
+	text-decoration: underline;
+
+}
+
+#registrarme:hover{
+
+	background-color: #D8DF04;
+}
+
+#envioDatos{
+	background-color:green;
+	border-radius: 12px;
+}
+
+#volverInicio{
+	color:red;
+	text-decoration: underline;
+}
+
+#showPass1{
+	background-color: pink;
+	border-radius: 12px;
+}
+
+#showPass2{
+	background-color: pink;
+	border-radius: 12px;
+}

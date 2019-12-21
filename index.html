@@ -1,0 +1,277 @@
+
+<html>
+<head>
+	<title>Mi Formulario</title>
+	<meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <style>
+
+    </style>
+</head>
+<body>
+
+<center>
+	<!--^[7|6]\d{8}$^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$-->
+
+	<fieldset>
+		
+		<h1>Mi formulario</h1>
+		<br>
+
+
+        <form method="POST">
+			
+			<div id="conexion" style="display:none;">
+				
+				<p id="hola"></p>
+
+			</div>
+
+		</form>
+
+		<form method="POST" onsubmit="iniciarSesion();return false">
+            
+            
+
+			<div id="inicio" style="display:block;">
+				
+				<table>
+					<tr>
+						<td>
+							
+							<label class="usuario">Usuario*:</label>
+
+						</td>
+
+						<td>
+							
+							<input class="error" type="email" title="Introduce un email"  id="usuario" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                            </input>
+						</td>
+					</tr>
+
+					<tr>
+						
+						<td>
+							
+							<label class="contrasena">Contraseña*:</label>
+
+						</td>
+
+						<td>
+							
+							<input class="error" type="password" title="Introduce minimo 8 caracteres" id="contrasena" minlength="8" maxlength="12" pattern="[A-Za-z0-9!?-]{8,12}" required>
+                            </input>
+						</td>
+
+						<td>
+							
+                            <input type="button" id="mostrarOcultar" value="mostrar/ocultar"></input>
+                            
+
+						</td>
+
+					</tr>
+
+					<tr>
+						
+						<td>
+							
+							<input type="submit" value="Acceder"></input>
+
+						</td>
+						<td>
+							
+							<a id="registrarme">Registrarme</a>
+
+						</td>
+
+					</tr>
+				
+				
+
+				
+				
+
+				</table>
+
+
+
+
+			</div>
+
+
+		</form>
+
+
+		<form method="POST" onsubmit="registrar()">
+			
+			<div id="registro" style="display:none;">
+				
+				<h2><i><u>Registro</u></i></h2>
+
+				<table>
+					
+					<tr>
+						
+						<td>
+							
+							<label class="nombre" id="nombre">Nombre*:</label>
+
+						</td>
+
+						<td>
+							
+							<input class="error" type="text" name="nombre" id="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,15}" required>
+
+						</td>
+
+					</tr>
+
+					<tr>
+						
+						<td>
+							
+							<label class="apellidos" id="apellidos">Apellidos*:</label>
+
+						</td>
+
+						<td>
+							
+							<input class="error" type="text" name="apellidos" id="apellidos" minlength="1" maxlength="15" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,15}" required>
+
+						</td>
+
+					</tr>
+
+					<tr>
+						
+						<td>
+							
+							<label class="email" id="email">Correo electrónico*:</label>
+
+						</td>
+
+						<td>
+							
+							<input class="error" type="email" name="email" id="email" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+
+						</td>
+
+					</tr>
+
+					<tr>
+						
+						<td>
+							
+							<label class="movil" id="movil">Móvil*:</label>
+
+						</td>
+
+						<td>
+							
+							<input class="error" type="tel"  name="movil" id="movil" pattern="^[7|6]\d{8}$" maxlength="9" required>
+
+						</td>
+
+					</tr>
+
+					<tr>
+						
+						<td>
+							
+							<label class="pass1">Contraseña*:</label>
+
+						</td>
+
+						<td>
+							
+							<input class="error" type="password" name="pass1" id="pass1" pattern="[A-Za-z0-9!?-]{8,12}" minlength="8" maxlength="12" required>
+
+						</td>
+						<td>
+							
+							<input type="button" id="showPass1" value="Mostrar/ocultar contraseña"></input>
+
+						</td>
+
+					</tr>
+
+					<tr>
+						
+						<td>
+							
+							<label class="pass2">Confirmar contraseña*:</label>
+
+						</td>
+
+						<td>
+							
+							<input class="error" type="password" name="pass2" id="pass2" pattern="[A-Za-z0-9!?-]{8,12}" minlength="8" maxlength="12" required>
+
+						</td>
+
+						<td>
+							
+							<input type="button" id="showPass2" value="Mostrar/ocultar contraseña"></input>
+
+						</td>
+
+					</tr>
+
+					<tr>
+						
+						<td>
+							
+							<label class="fechaNacimiento" >Fecha de nacimiento*:</label>
+
+						</td>
+
+						<td>
+							
+							<input type="date" id="fechaNacimiento" placeholder="fecha de nacimiento">
+
+						</td>
+
+					</tr>
+
+					<tr>
+						
+						<td>
+							
+							<input type="submit" value="Enviar datos"></input>
+
+						</td>
+
+
+					</tr>
+
+					<tr>
+						
+						<td>
+							
+							<a id="volverInicio">Volver a inicio</a>
+
+						</td>
+
+
+					</tr>
+
+
+
+
+				</table>
+
+			</div>
+
+		</form>
+
+
+
+	</fieldset>
+
+</center>
+
+<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>
