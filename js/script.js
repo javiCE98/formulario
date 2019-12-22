@@ -1,34 +1,51 @@
-var nombre=document.getElementById("nombre").value;
+/*var nombre=document.getElementById("nombre").value;
 var apellidos=document.getElementById("apellidos").value;
 var email=document.getElementById("email").value;
 var movil=document.getElementById("movil").value;
 var pass1=document.getElementById("pass1").value;
-var pass2=document.getElementById("pass2").value;
+var usuario=document.getElementById("usuario").value;
+var contrasena=document.getElementById("contrasena").value;
+var pass2=document.getElementById("pass2").value;*/
 
 
 
 function iniciarSesion(){
 
-    var usuario=document.getElementById("usuario").value;
-    var contrasena=document.getElementById("contrasena").value;
+    
     document.getElementById("conexion").style.display="block";
     document.getElementById("inicio").style.display="none";
+    document.getElementById("hola").innerHTML="Bienvenido "+getCookie(usuario)+" estás conectado";
+    document.getElementById("ok").style.display="none";
 
     
-    setCookie("usuario",document.getElementById("usuario").value, 1);
-    setCookie("contrasena",document.getElementById("contrasena").value, 1);
-
-
-    document.getElementById("hola").innerHTML="Bienvenido "+getCookie(usuario)+" estás conectado";
 
     
 
 }
 
 function registrar(){
+    if(document.getElementById("pass1").value!=document.getElementById("pass2").value){
+        alert("La confirmación de contraseña ha de coincidir con la contraseña");
+        
 
-    document.getElementById("registro").style.display="none";
-    document.getElementById("inicio").style.display="block";
+    }
+    else{
+      document.getElementById("ok").style.display="block";
+      var user = document.getElementById("correo").value;
+      var pass = document.getElementById("pass1").value;
+      document.cookie="prueba=hola;";
+      document.cookie = "usuario=" + encodeURIComponent(user)+";";
+      document.cookie = "contrasena="+ encodeURIComponent(pass)+";";
+      //setCookie("usuario",document.getElementById("email").value, 1);
+      //setCookie("contrasena",document.getElementById("pass1").value, 1);
+      document.getElementById("hola").innerHTML="Bienvenido "+getCookie(usuario)+" estás conectado";
+      document.getElementById("ok").innerHTML="<i><b>Se registró correctamente</b></i>";
+      document.getElementById("ok").style.color="green";
+      document.getElementById("registro").style.display="none";
+      document.getElementById("inicio").style.display="block";
+      
+    }
+
 }
 
 document.getElementById("registrarme").addEventListener("click",function(){
@@ -38,7 +55,11 @@ document.getElementById("registrarme").addEventListener("click",function(){
 });
 
 
+document.getElementById("logout").addEventListener("click",function(){
 
+  document.getElementById("conexion").style.display="none";
+  document.getElementById("inicio").style.display="block";
+});
 
 
 /*document.getElementById("envioDatos").addEventListener("onsubmit",function(){
@@ -76,7 +97,8 @@ document.getElementById("mostrarOcultar").addEventListener("click",function(){
 
 document.getElementById("showPass1").addEventListener("click",function(){
 
-	     var tipo = document.getElementById("pass1");
+       var tipo = document.getElementById("pass1");
+       
 
       if(tipo.type == "password"){
 
