@@ -11,15 +11,22 @@ var pass2=document.getElementById("pass2").value;*/
 
 function iniciarSesion(){
 
+
+  document.getElementById("ok").style.display="none";
+    if(document.getElementById("usuario").value==document.getElementById("contact").value
+    &&document.getElementById("contrasena").value==document.getElementById("pass1").value){
     
+     
+
+      setCookie("usuario",document.getElementById("contact").value, 1);
+      setCookie("contrasena",document.getElementById("pass1").value, 1);  
     document.getElementById("conexion").style.display="block";
     document.getElementById("inicio").style.display="none";
-    document.getElementById("hola").innerHTML="Bienvenido "+getCookie(usuario)+" estás conectado";
-    document.getElementById("ok").style.display="none";
+    document.getElementById("hola").innerHTML="Bienvenido "+document.getElementById("usuario").value+" estás conectado";
 
-    
+  }
 
-    
+  
 
 }
 
@@ -31,13 +38,13 @@ function registrar(){
     }
     else{
       document.getElementById("ok").style.display="block";
-      var user = document.getElementById("correo").value;
+      var user = document.getElementById("contact").value;
       var pass = document.getElementById("pass1").value;
-      document.cookie="prueba=hola;";
-      document.cookie = "usuario=" + encodeURIComponent(user)+";";
-      document.cookie = "contrasena="+ encodeURIComponent(pass)+";";
-      //setCookie("usuario",document.getElementById("email").value, 1);
-      //setCookie("contrasena",document.getElementById("pass1").value, 1);
+      
+     
+      setCookie("contact",user, 1);
+      setCookie("pass1",pass, 1); 
+ 
       document.getElementById("hola").innerHTML="Bienvenido "+getCookie(usuario)+" estás conectado";
       document.getElementById("ok").innerHTML="<i><b>Se registró correctamente</b></i>";
       document.getElementById("ok").style.color="green";
@@ -57,8 +64,22 @@ document.getElementById("registrarme").addEventListener("click",function(){
 
 document.getElementById("logout").addEventListener("click",function(){
 
+  delete_cookie("usuario");
+  delete_cookie("contrasena");
+  delete_cookie("contact");
+  delete_cookie("pass1");
+  document.getElementById("myForm1").reset();
+  document.getElementById("myForm2").reset();
+  document.getElementById("myForm3").reset();
+ 
+
   document.getElementById("conexion").style.display="none";
   document.getElementById("inicio").style.display="block";
+
+
+  //document.cookie("usuario="+document.getElementById("correo")+";Expires=Thu, 01 Jan 1970 00:00:01 GMT;");
+  //document.cookie("contrasena="+document.getElementById("pass1")+";Expires=Thu, 01 Jan 1970 00:00:01 GMT;");
+  
 });
 
 
@@ -175,7 +196,7 @@ function setCookie(cname, cvalue, exdays) {
   }
   
   function checkCookie() {
-    var user = getCookie("username");
+    var user = getCookie("usuario");
     if (user != "")
       alert("Welcome again " + user)
     else{

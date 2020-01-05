@@ -19,7 +19,7 @@
             <br>
     
     
-            <form method="POST">
+            <form method="POST" id="myForm3">
                 
                 <div id="conexion" style="display:none;">
                     
@@ -31,7 +31,7 @@
     
             </form>
     
-            <form method="POST" onsubmit="iniciarSesion();return false">
+            <form method="POST" onsubmit="iniciarSesion();return false" id="myForm1">
                 
                 <p style="display:none;" id="ok"></p>
     
@@ -46,8 +46,9 @@
                             </td>
     
                             <td>
-                                
-                                <input class="error" type="email" title="Introduce un email"  id="usuario" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
+                              
+
+                                <input class="error" type="text" title="Introduce un email o un teléfono"  id="usuario" pattern="^([0-9]{9})|([A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})$" required>
                                 </input>
                             </td>
                         </tr>
@@ -106,7 +107,7 @@
             </form>
     
     
-            <form method="POST" onsubmit="registrar();return false">
+            <form method="POST" onsubmit="registrar();return false" id="myForm2">
                 
                 <div id="registro" style="display:none;">
                     
@@ -118,13 +119,13 @@
                             
                             <td>
                                 
-                                <label class="nombre" id="nombre">Nombre*:</label>
+                                <label class="nombre" >Nombre*:</label>
     
                             </td>
     
                             <td>
                                 
-                                <input class="error" type="text" name="nombre" id="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,15}" required>
+                                <input class="error" type="text" title="Inroduce un nombre con 15 caracteres como máximo" name="nombre" id="nombre" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,15}" required>
     
                             </td>
     
@@ -134,49 +135,36 @@
                             
                             <td>
                                 
-                                <label class="apellidos" id="apellidos">Apellidos*:</label>
+                                <label class="apellidos">Apellidos*:</label>
     
                             </td>
     
                             <td>
                                 
-                                <input class="error" type="text" name="apellidos" id="apellidos" minlength="1" maxlength="15" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,15}" required>
+                                <input class="error" type="text" title="Introduce tus apellidos,como máximo 15 caracteres" name="apellidos" id="apellidos" minlength="1" maxlength="15" pattern="[a-zA-ZàáâäãåąčćęèéêëėįìíîïłńòóôöõøùúûüųūÿýżźñçčšžÀÁÂÄÃÅĄĆČĖĘÈÉÊËÌÍÎÏĮŁŃÒÓÔÖÕØÙÚÛÜŲŪŸÝŻŹÑßÇŒÆČŠŽ∂ð ,.'-]{1,15}" required>
     
                             </td>
     
                         </tr>
-    
+
                         <tr>
+
+                            <td>
+
+                                <label class="emailMovil">Email o móvil*:</label>
+
+                            </td>
+
+                            <td>
                             
-                            <td>
-                                
-                                <label class="email">Correo electrónico*:</label>
-    
+                                <input class="error" type="text" title="Introduce un email o un teléfono"  id="contact" pattern="^([0-9]{9})|([A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3})$" required>
+                            </input>
+
+
                             </td>
-    
-                            <td>
-                                
-                                <input class="error" type="email" id="correo" pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$" required>
-    
-                            </td>
-    
+
                         </tr>
-    
-                        <tr>
-                            
-                            <td>
-                                
-                                <label class="movil" id="movil">Móvil*:</label>
-    
-                            </td>
-    
-                            <td>
-                                
-                                <input class="error" type="tel"  name="movil" id="movil" pattern="^[7|6]\d{8}$" maxlength="9" required>
-    
-                            </td>
-    
-                        </tr>
+
     
                         <tr>
                             
@@ -188,7 +176,7 @@
     
                             <td>
                                 
-                                <input class="error" type="password" id="pass1" pattern="[A-Za-z0-9!?-]{8,12}" minlength="8" maxlength="12" required>
+                                <input class="error" type="password" id="pass1" pattern="[A-Za-z0-9!?-]{8,12}" minlength="8" maxlength="12" title="Introduce una contraseña con 8 caracteres como mínimo y 12 como máximo" required>
     
                             </td>
                             <td>
@@ -209,7 +197,7 @@
     
                             <td>
                                 
-                                <input class="error" type="password" name="confirmPass"  id="pass2" pattern="[A-Za-z0-9!?-]{8,12}" minlength="8" maxlength="12" required>
+                                <input class="error" type="password" name="confirmPass"  id="pass2" pattern="[A-Za-z0-9!?-]{8,12}" title="Repite la contraseña anterior" minlength="8" maxlength="12" required>
     
                             </td>
     
@@ -225,7 +213,7 @@
                             
                             <td>
                                 
-                                <label class="fechaNacimiento" >Fecha de nacimiento*:</label>
+                                <label class="fechaNacimiento" >Fecha de nacimiento:</label>
     
                             </td>
     
