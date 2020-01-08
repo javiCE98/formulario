@@ -24,24 +24,23 @@ Las cookies las he creado con cuatro funciones que saque de W3Schools que son se
 
 SI NO SE REALIZA ANTES DE FORMA CORRECTA EL REGISTRO NO SE PODRÁ INICIAR SESIÓN
 
-![Alt text](capturas/Captura1.png?raw=true "Captura1")
+https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura1.png
 
 SI NO SE RELLENAN LOS CAMPOS NO DEJA REALIZAR EL REGISTRO
 
-![Alt text](capturas/Captura2.png?raw=true "Captura2")
+https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura2.png
 
 SI LA CONFIRMACIÓN DE LA CONTRASEÑA NO COINCIDE CON LA CONTRASEÑA NO PERMITE REALIZAR EL REGISTRO
 
-![Alt text](capturas/Captura3.png?raw=true "Captura3")
+https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura3.png
 
 SI EL REGISTRO SE REALIZA CORRECTAMENTE APARERERÁ EL MENSAJE EN VERDE DE SE HA REGISTRADO CORRECTAMENTE
-
-![Alt text](capturas/Captura4.png?raw=true "Captura4")
+https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura4.png
 
 SI EL LOGIN COINCIDE CON EL REGISTRO SE HABRÁ INICIADO ENTONCES LA SESIÓN Y APARECERÁ UN MENSAJE DE BIENVENIDA
 
-![Alt text](capturas/Captura5.png?raw=true "Captura5")
+https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura5.png
 
 SI SE PULSA EL BOTÓN DE LOGOUT LA SESIÓN ENTONCES SE CERRARÁ
 
-![Alt text](capturas/Captura6.png?raw=true "Captura6")
+https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura6.png
