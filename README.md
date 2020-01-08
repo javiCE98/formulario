@@ -24,7 +24,7 @@ Las cookies las he creado con cuatro funciones que saque de W3Schools que son se
 
 SI NO SE REALIZA ANTES DE FORMA CORRECTA EL REGISTRO NO SE PODRÁ INICIAR SESIÓN
 
-https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura1.png
+![alt text](https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura1.png)
 
 SI NO SE RELLENAN LOS CAMPOS NO DEJA REALIZAR EL REGISTRO
 
