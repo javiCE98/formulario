@@ -23,7 +23,22 @@ Y es entonces cuando tendremos que realizar un nuevo registro de forma correcta 
 Las cookies las he creado con cuatro funciones que saque de W3Schools que son setCookie,getCookie,checkCookie y delete_cookie.
 
 SI NO SE REALIZA ANTES DE FORMA CORRECTA EL REGISTRO NO SE PODRÁ INICIAR SESIÓN
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+![Alt text](/capturas/Captura1.png?raw=true "Captura1")
 
+SI NO SE RELLENAN LOS CAMPOS NO DEJA REALIZAR EL REGISTRO
+![Alt text](/capturas/Captura2.png?raw=true "Captura2")
 
-![Alt text](/relative/path/to/img.jpg?raw=true "Optional Title")
+SI LA CONFIRMACIÓN DE LA CONTRASEÑA NO COINCIDE CON LA CONTRASEÑA NO PERMITE REALIZAR EL REGISTRO
+![Alt text](/capturas/Captura3.png?raw=true "Captura3")
+
+SI EL REGISTRO SE REALIZA CORRECTAMENTE APARERERÁ EL MENSAJE EN VERDE DE SE HA REGISTRADO CORRECTAMENTE
+
+![Alt text](/capturas/Captura4.png?raw=true "Captura4")
+
+SI EL LOGIN COINCIDE CON EL REGISTRO SE HABRÁ INICIADO ENTONCES LA SESIÓN Y APARECERÁ UN MENSAJE DE BIENVENIDA
+
+![Alt text](/capturas/Captura5.png?raw=true "Captura5")
+
+SI SE PULSA EL BOTÓN DE LOGOUT LA SESIÓN ENTONCES SE CERRARÁ
+
+![Alt text](/capturas/Captura6.png?raw=true "Captura6")
