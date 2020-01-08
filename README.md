@@ -28,19 +28,19 @@ SI NO SE REALIZA ANTES DE FORMA CORRECTA EL REGISTRO NO SE PODRÁ INICIAR SESIÓ
 
 SI NO SE RELLENAN LOS CAMPOS NO DEJA REALIZAR EL REGISTRO
 
-https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura2.png
+![alt text](https://github.com/javiCE98/formulario/blob/master/capturas/Captura2.PNG)
 
 SI LA CONFIRMACIÓN DE LA CONTRASEÑA NO COINCIDE CON LA CONTRASEÑA NO PERMITE REALIZAR EL REGISTRO
 
-https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura3.png
+![alt text](https://github.com/javiCE98/formulario/blob/master/capturas/Captura3.PNG)
 
 SI EL REGISTRO SE REALIZA CORRECTAMENTE APARERERÁ EL MENSAJE EN VERDE DE SE HA REGISTRADO CORRECTAMENTE
-https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura4.png
+![alt text](https://github.com/javiCE98/formulario/blob/master/capturas/Captura4.PNG)
 
 SI EL LOGIN COINCIDE CON EL REGISTRO SE HABRÁ INICIADO ENTONCES LA SESIÓN Y APARECERÁ UN MENSAJE DE BIENVENIDA
 
-https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura5.png
+![alt text](https://github.com/javiCE98/formulario/blob/master/capturas/Captura5.PNG)
 
 SI SE PULSA EL BOTÓN DE LOGOUT LA SESIÓN ENTONCES SE CERRARÁ
 
-https://raw.githubusercontent.com/javiCE98/formulario/master/capturas/Captura6.png
+![alt text](https://github.com/javiCE98/formulario/blob/master/capturas/Captura6.PNG)
